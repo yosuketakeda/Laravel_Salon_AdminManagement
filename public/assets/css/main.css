@@ -1,0 +1,944 @@
+body{
+    background: #fff;
+    font-family: "Noto Serif JP";
+}
+/* noto-serif-jp-regular - japanese */
+@font-face {
+    font-family: 'Noto Serif JP';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/noto-serif-jp-v7-japanese-regular.eot'); /* IE9 Compat Modes */
+    src: local('Noto Serif JP'), local('NotoSerifJP-Regular'),
+         url('../fonts/noto-serif-jp-v7-japanese-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/noto-serif-jp-v7-japanese-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/noto-serif-jp-v7-japanese-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/noto-serif-jp-v7-japanese-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/noto-serif-jp-v7-japanese-regular.svg#NotoSerifJP') format('svg'); /* Legacy iOS */
+}
+a:hover{
+    cursor: pointer;
+}
+.btn-action{
+    padding: 10px 20px !important;
+    border-radius: 5px;
+    border: 2px solid #9a9a9a;
+}
+input:focus, select:focus, span:focus, button:focus{
+    outline: none;
+}
+button:hover{
+    cursor: pointer;
+}
+#dialog-warning{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000070;
+    z-index: 9999;
+}
+#dialog-warning .body{
+    width: 30%;
+    margin: 10% auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 4px solid #656565;
+}
+#dialog-warning .btn-section{
+    padding: 0;
+    justify-content: center;
+}
+#dialog-warning .btn-section button{
+    width: 100px;
+}
+#dialog-warning button{
+    color: #000;
+    background: #ddd;
+    border: 1px solid #9a9a9a;
+    font-size: 15px;
+    padding: 3px 15px;
+    border-radius: 5px;
+    margin: 5px;
+}
+/************************ Login Page ***************************/
+.py-4{
+    padding-top: 50px !important;
+}
+.card{
+    border: none;
+}
+.card-header{
+    border-bottom: 2px solid #000;
+    background: #fff;
+    border-left: 10px solid #000;
+    font-size: 22px;
+    padding: 13px;
+    line-height: 1;
+    font-weight: bold;
+}
+.card-body{
+    padding: 50px 0;
+}
+.form-group{
+    display: block !important;
+    margin: 0 !important;
+}
+.text-md-right{
+    text-align: left !important;
+}
+.login-submit{
+    padding: 20px;
+    text-align: center;
+}
+.bg-white{
+    background: #eee !important;
+}
+.mr-auto, .mx-auto{
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+.navbar-nav li{
+    margin-right: 30px;
+}
+.navbar-nav li a{
+    color: #000;
+    text-decoration: none;  
+}
+.shadow-sm{
+    box-shadow: none !important;
+    border-bottom: 1px solid #9a9a9a;
+}
+.table-section table{
+    width: 100%;
+    text-align: center;
+    table-layout: collapse;
+}
+.table-section table th{
+    border: 1px solid #000; 
+    padding: 5px;
+    background: #ddd;
+}
+.table-section table td{
+    border: 1px solid #000;
+    padding: 5px;
+}
+.table-section table .edit, .table-section table .delete{
+    font-size: 13px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 2px solid #9a9a9a;
+}
+.table-section table .edit{
+    color: #000;
+    background: #ddd;
+}
+.table-section table .delete{
+    color: #fff;
+    background: #ff0000;
+}
+.table-section table .delete:hover{
+    cursor: pointer;
+}
+/************************* admin dashboard ***************************/
+.admin-dashboard .title{
+    padding-top: 50px;
+    font-size: 20px;
+    padding-bottom: 0;
+}
+.admin-dashboard .intro{
+    padding: 10px 0;
+    font-size: 16px; 
+    text-align: center;
+}
+.admin-dashboard .intro .add-new{
+    color: #000;
+    background: #ddd;
+    border: 1px solid #9a9a9a;
+    font-size: 15px;
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+.admin-dashboard .term.last{
+    padding: 50px 0;
+}
+.table-section{
+    padding: 30px 0;
+}
+.admin-dashboard .table-section{
+    padding: 5px 0;
+}
+.admin-dashboard .last{
+    margin-bottom: 100px;
+}
+/*********************************** admin add new ***************************************/
+.admin-add-new .first, .admin-add-new .second, .admin-add-new .query-edition{
+    display: none;
+}
+ .title{
+    padding: 20px 0;
+}
+ .row{
+    font-size: 16px;
+    margin: 15px 0;
+}
+ .col-md-2.col-sm-2{
+    padding : 5px 10px;
+    background: #a9d18e;
+    text-align: right;
+    font-weight: bold;
+}
+ .col-md-10.col-sm-10{
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+}
+ .col-md-2.col-sm-2.next{
+    background: none;
+}
+ .query-cat,  .col-md-10.col-sm-10 input{
+    width: 80%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+ .col-md-10.col-sm-10 span{
+    padding:0 10px;    
+}
+ .col-md-10.col-sm-10 .del:hover{
+    cursor: pointer;
+}
+ .answer-section .col-md-10.col-sm-10 span{
+    width: 50px ;
+}
+ .btn-section{
+    padding: 30px 0;
+}
+ .btn-section{
+    display: flex;
+}
+ .btn-section .add-answer,  .btn-section .run{
+    padding: 7px 20px;
+    width: 150px;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center;    
+}
+.second{
+    padding-bottom: 50px;
+}
+.admin-add-new .second .query-delete:hover{
+    cursor:pointer;
+}
+ .query-edit,  .query-delete{
+    padding: 5px 20px !important;    
+    border-radius: 5px;
+    border: 2px solid #9a9a9a;
+} 
+ .query-edit{
+    background: #ddd;
+    margin-right: 30px;
+    color: #212529;
+}
+ .query-delete{
+    background: red;
+    color: #fff;
+}
+.query-delete:hover{
+    cursor:pointer;
+}
+ .btn-section .add-answer:hover,  .btn-section .run:hover{
+    cursor: pointer;
+}
+ .btn-section .run{
+    margin-left: auto;
+    margin-right: 0;
+}
+ .second .col-md-3.col-sm-3{
+    padding: 0;
+}
+ .return-dashboard a{
+    color: #000;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    background: #ddd;
+}
+.answer-col-2{
+    background: #fff !important;
+    padding: 0 !important;   
+}
+.answer-name{
+    background: #a9d18e;
+    padding: 6px 10px;
+    display: block;
+}
+.answer-dynamic{
+    display: block !important;
+}
+.answer-dynamic .row{
+    align-items: center;
+}
+.del{
+    background: red;
+    color: #fff;
+    font-size: 13px;
+    padding: 3px 10px !important;
+    border-radius: 5px;
+    border: 2px solid #9a9a9a;
+    margin-left: 30px;
+}
+ .multiple-choice .card-header{
+    margin-bottom: 30px;
+}
+
+/*********************************** multiple *************************************/
+.multiple-section .multiple, .multiple-section .multiple-choice, .multiple-section .multiple-edition{
+    display: none;
+}
+.multiple .btn-section .add, .multiple .btn-section .link-choice{
+    padding: 7px 20px;
+    width: auto;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center;
+}
+.multiple .btn-section .add{
+    margin-right: 30px;
+}
+.multiple .btn-section .add:hover{
+    cursor:pointer;
+}
+.multiple .btn-section.bottom{
+    display:none;
+}
+.new-id-multiple{
+    margin-right: 70px;
+}
+.multiple .answer-section{
+    display: none;
+}
+.multiple .sub-id{
+    width: 50px;
+}
+
+/********************************** admin-choice ****************************************/
+.admin-choice .register, .admin-choice .choice-edition, .admin-choice .choice-management{
+    display:none;
+}
+.admin-choice .btn-section .add, .admin-choice .btn-section .link-choice, .admin-choice .btn-section .return-input, .admin-choice .btn-section .add-last-template, .admin-choice .choice-edition .last-template .run, .admin-choice .choice-management .last-template-manage .run{
+    padding: 7px 40px;
+    width: auto;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center;
+}
+.admin-choice .register .query-section .col-md-10.col-sm-10 span{
+    width: 40px;
+}
+.admin-choice .btn-section .add{
+    margin-right: 40px;
+}
+.admin-choice .btn-section .add:hover{
+    cursor: pointer;
+}
+.admin-choice textarea{
+    width: 80%;
+    padding: 5px 10px;
+}
+.admin-choice .col-md-2.col-sm-2.next{
+    padding: 0;
+}
+.admin-choice .link-choice:hover{
+    cursor: pointer;
+}
+.admin-choice .btn-section .return-input{
+    margin-right: 100px;
+}
+.admin-choice .add-last-template:hover{
+    cursor: pointer;
+} 
+.admin-choice .last-template{
+    display: none;
+    width: 80%;
+    margin-left: auto;
+}
+.admin-choice .query-cat{
+    width: 100%;
+}
+.admin-choice .choice-edition .last-template .run{
+    margin-left: auto;
+}
+.admin-choice .choice-edition .last-template .run:hover{
+    cursor: pointer;
+}
+.admin-choice .last-template-manage{
+    width: 70%;
+    margin: auto;
+}
+.admin-choice .last-template-manage input{
+    width: 100%;
+    padding: 5px 20px;
+    background: #fff;
+    border: 1px solid #333;
+    color: #333;
+}
+.admin-choice .choice-management .last-template-manage .run{
+    float: right;
+}
+.admin-choice .choice-management .last-template-manage .run:hover{
+    cursor: pointer;
+}
+.admin-choice .choice-management .last-template-manage .btn-two{
+    display: none;
+}
+
+/******************************** admin-last-templage *********************************/
+.admin-last-template .management{
+    display:none;
+}
+.admin-last-template .addition .refer, .admin-last-template .management .edit-template{
+    padding: 7px 40px;
+    width: auto !important;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+}
+.admin-last-template .addition .refer{
+    padding: 0px 40px;
+}
+.admin-last-template .addition .file-name{
+    width: auto !important;
+} 
+.admin-last-template .management .col-md-10.col-sm-10 span{
+    width: auto;
+}
+.admin-last-template .management .delete{
+    padding: 7px 40px;
+    width: auto !important;
+    background: red;
+    color: #fff;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center;  
+    margin-left: 40px;  
+}
+.admin-last-template .addition .refer:hover, .admin-last-template .management .delete:hover{
+    cursor:pointer;
+}
+
+/*********************************** admin info ************************************/
+.admin-info .edit, .admin-info .confirm-section{
+    display: none;
+}
+.admin-info .link, .admin-info .confirm{
+    padding: 7px 20px;
+    width: 150px;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center; 
+    margin: 15px 0;
+}
+.admin-info .link, .admin-info .confirm:hover{
+    cursor: pointer;
+}
+.admin-info .btn-section{
+    padding: 15px 0;
+}
+.admin-info .btn-section .link{
+    margin-left: auto;
+    margin-right: auto;
+}
+.admin-info .edit .link{
+    margin: 15px 15px;
+}
+.admin-info .col-md-3.col-sm-3{
+    background: #6cb2eb;
+    padding: 5px 20px;
+    font-weight: bold;
+    text-align: right;
+}
+.admin-info .col-md-9.col-sm-9{
+    padding-left: 40px;
+}
+.admin-info .col-md-9.col-sm-9 input{
+    padding: 5px 15px;
+    width: 100%;
+    border-radius: 7px;
+}
+.admin-info .col-md-9.col-sm-9 input:focus{
+    outline: none;
+}
+.eye-img{
+    position: absolute;
+    margin-left : -50px;    
+    margin-top: 6px;
+}
+.eye-img:hover{
+    cursor: pointer;
+}
+
+/******************** Admin account lists *********************/
+.admin-account-list .list, .admin-account-list .add-new, .admin-account-list .account-info, .admin-account-list .account-confirm, .admin-account-list .edition{
+    display: none;
+}
+.admin-account-list .list .store-manager, .admin-account-list .list .add-new, .admin-account-list .link, .admin-account-list .confirm, .admin-account-list .account-info .delete, .admin-account-list .account-confirm .delete{
+    padding: 7px 20px;
+    width: 150px;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center; 
+    margin: 15px 0;
+    font-weight: 500;
+}
+.admin-account-list .account-info .delete, .admin-account-list .account-confirm .delete{
+    background: red;
+    color: #fff;
+}
+.admin-account-list .list .add-new{
+    margin-left: auto;
+}
+.admin-account-list .list .users{
+    padding: 7px 20px;
+    width: 150px;
+    background: #fff;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center; 
+    margin: 15px 0 15px 20px;
+}
+.admin-account-list .col-md-3.col-sm-3{
+    background: #6cb2eb;
+    padding: 5px 20px;
+    font-weight: bold;
+    text-align: right;
+}
+.admin-account-list .col-md-9.col-sm-9{
+    padding-left: 40px;
+}
+.admin-account-list input{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+.admin-account-list .add-new input:focus{
+    outline:none;
+}
+.admin-account-list .permission{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+.admin-account-list .link{
+    margin-right: 20px; 
+}
+.admin-account-list .confirm:hover{
+    cursor:pointer;
+}
+.admin-account-list .confirm:focus{
+    outline:none;
+}
+.admin-account-list .account-info input, .admin-account-list .account-confirm input, .user-part .user-info input{
+    border: none;
+}
+.admin-account-list .list .users-section{
+    display: none;
+}
+
+/****************** admin query overall ********************/
+.query-overall .link-top{
+    padding: 7px 20px;
+    width: 150px;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center; 
+    margin: 15px 0;
+}
+.query-overall .query-select .title{
+    background: #94bff5;
+    font-weight:bold;
+    padding: 7px 25px;
+    width: 20%;
+    margin-right: 20px;
+}
+.query-overall .query-select .queries{
+    width: 80%;
+    padding: 5px 20px;
+    border-radius: 7px;
+}
+.query-overall .overall{
+    margin: 30px 0 50px;
+    padding: 30px 20px;
+    border: 1px solid #9a9a9a;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 600px;
+}
+.query-overall .overall .first{
+    padding: 10px 20px;
+    background: #f8cbad;
+    display: flex;
+    align-items: center;
+    width: 640px; 
+}
+.query-overall .overall .query{
+    margin-right: 50px;    
+}
+.query-overall .overall .edit{
+    background: #ddd;    
+    color: #333;
+    font-size: 13px;
+    padding: 3px 10px !important;
+    border-radius: 5px;
+    border: 2px solid #9a9a9a;    
+}
+.query-overall .overall .del{
+    margin-left: 5px;
+}
+.query-overall .overall .rate{
+    margin-top: 10px;
+    background: #ddd;    
+    color: #333;
+    font-size: 13px;
+    padding: 3px 10px !important;
+    border-radius: 5px;
+    border: 2px solid #9a9a9a;    
+    text-align:center;
+    display: block;
+}
+.query-overall .overall .action-section{
+    margin-left: auto;
+}
+.query-overall .overall .answer-section{
+    padding: 20px;
+}
+.query-overall .overall .node{
+    display: block;
+    padding: 10px 20px;
+    background: #ffff00;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.query-overall .overall .choice-section{
+    padding: 10px 20px;
+    background: #c5e0b4;
+    margin-right: 40px; 
+    width: 100%; 
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.query-overall .overall .last_template{
+    padding: 10px 20px;
+    background: #b4c7e7;
+    margin-right: 40px; 
+    width: 100%; 
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.query-overall .symbol{
+    margin-right: 20px; 
+    font-size: 20px;
+}
+.query-overall .node-answer{
+    padding: 20px;
+}
+.query-overall .del:hover, .query-overall .rate:hover{    
+    cursor: pointer;
+}
+.query-overall .choice-value{
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    background: #85efb1;
+    display: flex;
+    align-items:center;
+}
+.query-overall .template{
+    display: flex;
+    background: #5b9bd5;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+.rate-section .title{
+	font-weight: bold;
+	font-size: 20px;
+}
+.rate-section .link-top{
+    padding: 7px 20px;
+    width: 200px;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+}
+.rate-section .graph-section{
+    width: 800px;
+    height: 550px;
+    border: 1px solid #ddd;
+    margin-bottom: 100px;
+    display: flex;
+}
+.rate-section .graph-section .chart, .rate-section .graph-section .marks{
+    width: 50%;
+}
+.charts .highcharts-title{
+    display:none;
+}
+.charts{
+	border: 1px solid #ccc;
+}
+.highcharts-label.highcharts-data-label tspan{
+	font-size: 14px;
+}
+
+/************************ User ****************************/
+.user-part .list, .user-part .add-part, .user-part .user-info, .user-part .account-confirm, .user-part .edition{
+    display: none;
+}
+.user-part .link, .user-part .btn-section .delete, .user-part .confirm{
+    padding: 7px 20px;
+    width: 150px;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center; 
+    margin: 15px 0;
+}
+.user-part .link{
+    margin-right: 20px;
+}
+.user-part .delete{
+    background: #ff0000 !important;
+    color: #fff !important;
+}
+
+.user-part .users, .user-part .add-new{
+    padding: 7px 20px;
+    width: 150px;
+    background: #ddd;
+    color: #000;
+    border: 2px solid #9a9a9a;
+    border-radius: 7px;
+    display: block;
+    text-align: center; 
+    margin: 15px 0;
+    font-weight: 500;
+}
+.user-part .add-new{
+    margin-left: auto;
+}
+.user-part .col-md-3.col-sm-3{
+    background: #6cb2eb;
+    padding: 5px 20px;
+    font-weight: bold;
+    text-align: right;
+}
+.user-part .col-md-9.col-sm-9{
+    padding-left: 40px;
+}
+.user-part .col-md-9.col-sm-9 input{
+    padding: 5px 15px;
+    width: 100%;
+    border-radius: 7px;
+}
+.user-part .permission{
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 7px;
+}
+.question-menu .question-section{
+    padding: 30px 0;
+}
+.question-menu .question-section .question{
+    padding: 10px 20px;
+    background: #4472c4;
+    width: 80%;
+    color: #fff;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+.question-menu .question-section .question a{
+    width: 100%;
+    color: #fff;
+    display: block;
+}
+/***************************** home *******************************/
+.question-menu .choose, .common .choose{
+    display: none;
+}
+.question-menu .choose{
+    padding: 50px 0;
+}
+.menu{
+    background: #f0f0f0;
+    padding: 10px 0px;
+    color: #9f9f9f;
+    margin-bottom: 50px;
+}
+.menu .container{
+    display: flex;
+    align-items: center;
+}
+.menu .txt{
+    margin-left: auto;
+}
+ .question-section .question{
+    width: auto;
+    background: #f0f0f0;
+    margin-bottom: 40px;
+    padding: 30px 40px;  
+    font-size: 17px;  
+}
+ .question-section .question a{
+    color: #333;
+    width: 100%;
+    display: block;
+    font-size: 18px;
+}
+ .question-section .question .symbol{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: -40px;
+    padding: 0px 15px;
+    background: #707070;
+    color: #fff;
+    font-size: 14px;
+}
+.common .answer-section .symbol, .common .bottom .symbol{    
+    padding: 0px 15px;
+    background: #707070;
+    color: #fff;
+    font-size: 14px;
+}
+.common .bottom{
+    margin: 50px 0 50px 0;
+    text-align: right;
+}
+.common .answer-section .answer{
+    padding: 8px 20px;
+    border: 1px solid #707070;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.common .answer-section .answer a{
+    color: #707070;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.common .answer-section .answer a img{
+    margin-left: auto;
+}
+.common .answer-section .answer .num{
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    background: #707070;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.choose .question .symbol{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: -40px;
+    padding: 0px 15px;
+    background: #707070;
+    color: #fff;
+    font-size: 14px;
+}
+.choose .answer-section .symbol{
+    padding: 0px 15px;
+    background: #707070;
+    color: #fff;
+    font-size: 14px;
+}
+.choose .question{
+    width: auto;
+    background: #f0f0f0;
+    margin-bottom: 40px;
+    padding: 30px 40px;    
+    font-size: 17px;
+}
+ .choose .question a{
+    color: #333;
+    width: 100%;
+    display: block;
+    font-size: 18px;
+}
+
+.question-menu .answer-section .answer{
+    padding: 8px 20px;
+    border: 1px solid #707070;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.question-menu .answer-section .answer a{
+    color: #707070;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.question-menu .answer-section .answer a img{
+    margin-left: auto;
+}
+.question-menu .answer-section .answer .num{
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    background: #707070;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+/********************** last template view ******************************/
+.last_view{
+    padding: 20px;
+}
+.last_view img{
+    width: 100%;
+}
+/**************************************************************/
+@media(max-width: 570px){
+    .menu .txt{
+        font-size: 12px;
+    }
+}
